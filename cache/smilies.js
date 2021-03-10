@@ -67,7 +67,7 @@ function smilies_onload(id, smcols, seditorkey) {
 				}
 				j = ++j > 3 ? 0 : j;
 				s = smilies_array[smilies_fast[i][0]][smilies_fast[i][1]][smilies_fast[i][2]];
-				smilieimg = "https://i1.zmsjaz.com/static/"  + 'image/smiley/' + smilies_type['_' + smilies_fast[i][0]][1] + '/' + s[2];
+				smilieimg = "https://cdn.jsdelivr.net/gh/cnlangroot/cnlangorg/static/"  + 'image/smiley/' + smilies_type['_' + smilies_fast[i][0]][1] + '/' + s[2];
 				img[k] = new Image();
 				img[k].src = smilieimg;
 				smilies_fastdata += s ? '<td onmouseover="smilies_preview(\'' + seditorkey + '\', \'fastsmiliesdiv\', this, ' + s[5] + ')" onmouseout="$(\'smilies_preview\').style.display = \'none\'" onclick="' + (typeof wysiwyg != 'undefined' ? 'insertSmiley(' + s[0] + ')': 'seditor_insertunit(\'' + seditorkey + '\', \'' + s[1].replace(/'/, '\\\'') + '\')') +
@@ -91,7 +91,7 @@ function smilies_switch(id, smcols, type, page, seditorkey) {
 			j = 0;
 		}
 		s = smilies_array[type][page][i];
-		smilieimg = "https://i1.zmsjaz.com/static/" + 'image/smiley/' + smilies_type['_' + type][1] + '/' + s[2];
+		smilieimg = "https://cdn.jsdelivr.net/gh/cnlangroot/cnlangorg/static/" + 'image/smiley/' + smilies_type['_' + type][1] + '/' + s[2];
 		img[k] = new Image();
 		img[k].src = smilieimg;
 		smiliesdata += s && s[0] ? '<td onmouseover="smilies_preview(\'' + seditorkey + '\', \'' + id + '\', this, ' + s[5] + ')" onclick="' + (typeof wysiwyg != 'undefined' ? 'insertSmiley(' + s[0] + ')': 'seditor_insertunit(\'' + seditorkey + '\', \'' + s[1].replace(/'/, '\\\'') + '\')') +
